@@ -1,3 +1,24 @@
 body {
   background: peachpuff;
 }
+* {
+  border: 1px solid teal;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.a {
+  width: 100%;
+}
+.b, .c, .d, .e, .f, .g {
+  width: 33%;
+}
+.h{
+  width: 100%;
+}
