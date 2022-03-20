@@ -6,7 +6,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 50vh;
   text-align: center;
   flex-wrap: wrap;
 }
@@ -22,12 +22,41 @@ body {
 .f {
   width: 100%;
 }
+/* SCRAPPED IDEA FLEXBOX */
+/* @media (min-width: 600px) {
+  .container {
+    display: inline-flex;
+    flex-flow: row wrap;
+    min-height: 100vh;
+    min-width: 50vh;
+    text-align: center;
+  }
+  .a{
+    display: inline-block;
+    flex: 0 0 100%;
+  }
+  .b{
+    flex: 0 0 66%;
+  }
+  .f{
+    order: 1;
+    flex: 0 0 33%
+  }
+} */
 
 @media (min-width: 600px) {
-  .b {
-    flex-grow: 3;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  .c, .d, .e {
-    flex-grow: 1;
+  .a{
+    grid-column: 1/5;
   }
-}
+  .b{
+    grid-column: 1/4;
+  }
+  .f{
+    grid-column: 4/5;
+    grid-row: 2/4;
+  }
+} 

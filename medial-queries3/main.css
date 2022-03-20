@@ -6,19 +6,31 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 50vh;
   text-align: center;
-  flex-wrap: wrap;
+}
+.a {
+  grid-column: 1/4;
+}
+.h {
+  grid-column: 1/4;
+  grid-row: 4/7;
 }
 
-.a {
-  width: 100%;
-}
-.b, .c, .d, .e, .f, .g {
-  width: 33%;
-}
-.h{
-  width: 100%;
+@media (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-height: 50vh;
+    text-align: center;
+  }
+  .a {
+    grid-column: 1/5;
+  }
+  .h {
+    grid-column: 4/5;
+    grid-row: 2/4;
+  }
 }

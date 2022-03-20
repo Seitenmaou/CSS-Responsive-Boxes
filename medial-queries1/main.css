@@ -27,8 +27,7 @@ body {
       flex-wrap: wrap;
     }
     .a {
-      
-      width: 100%
+      width: 100%;
     }
     .b {
       flex-grow: 3;
